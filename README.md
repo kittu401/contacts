@@ -7,4 +7,6 @@ There are two functions in this file
     if file doesnot exists in directory it creates file with given file name and writes given data in to the file.
     
 2. second function is for retreiving data from file.
+3. added email functions 
+
     
