@@ -3,9 +3,9 @@ import os    # importing OS module
 file_name = input("enter filename : ")      # Takes file name as input
 
 # creates file path and checks given file name presented or not
-x = os.path.isfile('E:\python\python work space\webScraping\db\\'+file_name+'.txt')
 
-# please change file path according to your working directory in your system
+
+
 
 
 def contacts():         # function for adding data to file
