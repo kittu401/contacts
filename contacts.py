@@ -1,7 +1,7 @@
 import re    # importing regular expression library
 import os    # importing OS module
-file_name = input("enter filename : ")      # Takes file name as input
-
+      # Takes file name as input
+file_name = input("enter filename : ")
 # creates file path and checks given file name presented or not
 
 
@@ -9,6 +9,7 @@ file_name = input("enter filename : ")      # Takes file name as input
 
 
 def contacts():         # function for adding data to file
+
     name = input("Enter Name :")
     number = input("Enter Number :")
     f = open('%s.txt' % file_name, 'a')  # opens file on append mode so that data wont get replaced
