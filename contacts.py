@@ -1,18 +1,7 @@
-import re    # importing regular expression library
-import os    # importing OS module
-      # Takes file name as input
-file_name = input("enter filename : ")
-# creates file path and checks given file name presented or not
-
-
-
-
-
-def contacts():         # function for adding data to file
-
+def contacts(name1):         # function for adding data to file
     name = input("Enter Name :")
     number = input("Enter Number :")
-    f = open('%s.txt' % file_name, 'a')  # opens file on append mode so that data wont get replaced
+    f = open('%s.txt' % name1, 'a')  # opens file on append mode so that data wont get replaced
     f.write(name + ' ,' + number)
     f.write("\n")       # writes data into next line
     print("Contact saved Succesfully")
@@ -24,18 +13,11 @@ def contacts():         # function for adding data to file
         if choice == 1:
             name = input("Enter Name :")
             number = input("Enter Number :")
-            f = open('%s.txt' % file_name, 'a')
+            f = open('%s.txt' % name1, 'a')
             f.write(name + ' ,' + number )
             f.write("\n")
             print("Contact saved Succesfully")
             f.close()
         else:
             break
-
-
-def search():               # function for checking wether given input present in that file or not
-    search_name = input("Enter name to be searched :")
-    f = open('%s.txt' % file_name)
-    for line in f:
-        if re.search(search_name, line):
-            print(line, end=' ')
+    
