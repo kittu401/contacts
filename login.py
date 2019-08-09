@@ -1,5 +1,8 @@
 def login():
+    print("LOGIN PAGE")
     import pymysql
+    from Contacts.otp_func import otp
+    from Contacts.core_fun import core
     db_name = "contacts"
     table = "user_reg"
     db = pymysql.connect(host='localhost', database=db_name, user='', passwd='')
@@ -16,9 +19,12 @@ def login():
             email = str(row[2]).lower()
             password = str(row[3]).lower()
             if email == user_email and password == user_password:
-
-                print("Hello " + row[1])
-                break
+                otp = otp()
+                otp_input = int(input("enter your otp : "))
+                if otp_input == otp:  # checks for otp match
+                    print("Hello " + row[1])
+                    core()
     else :
         print("Enter Valid Credentials")
         login()
+
