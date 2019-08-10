@@ -9,5 +9,5 @@ There are two functions in this file
 2. second function is for retreiving data from file.
 3. added email functions which sends email if changes made to file
 4. added OTP Funcnality to access file.
-
+5. Added Registration and Login Functions.
     
